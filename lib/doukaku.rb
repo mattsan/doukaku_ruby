@@ -1,5 +1,5 @@
-require "doukaku/version"
+require 'doukaku/version'
+require 'doukaku/test_runner'
 
 module Doukaku
-  # Your code goes here...
 end
