@@ -22,6 +22,37 @@ Or install it yourself as:
 
 ## Usage
 
+### Doukaku::TestRunner
+
+Define a module it have method `solve`.
+
+```ruby
+module Solver
+  def solve(input)
+    input.chars.map(&:to_i).sum.to_s
+  end
+end
+```
+
+Define a class it's extend `Doukaku::TestRunner` and the module defined above.
+
+```ruby
+class Test
+  extend Doukaku::TestRunner
+  extend Solver
+
+  test('123', '6')
+  test('234', '10')
+end
+```
+
+Then run the class.
+
+```
+ 1: passed
+ 2: failed  input: 234, expected: 10, actual: 9
+```
+
 TODO: Write usage instructions here
 
 ## Development
